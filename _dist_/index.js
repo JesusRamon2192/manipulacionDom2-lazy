@@ -5,7 +5,7 @@ import {registerImage} from "./lazy.js"
 
 const maximum = 122;
 const minimum = 1;
-const random = () => Math.floor(Math.random() * (maximum - minimum)) + minimum
+const random = () => Math.floor(Math.random() * (maximum - minimum)) + minimum;
 
 const createImageNode = () => {
     const imagen = document.createElement("img")
@@ -19,6 +19,8 @@ const createImageNode = () => {
     container.style.display = "inline-block";
 
     container.appendChild(imagen);
+    appendedImages++;
+    printLog();
     
     return container;
 };
@@ -32,7 +34,7 @@ const addImages = () => {
     const newImage = createImageNode();
     mountNode.append(newImage);
     registerImage(newImage);
-    console.log(mountNode.innerHTML)
+    //console.log(mountNode.innerHTML)
 }
 
 addButton.addEventListener("click", addImages)

@@ -53,7 +53,16 @@
           
         </div>
       </div>
+      <script>
+        let appendedImages = 0;
+        let loadedImages = 0;
 
+        const printLog = () => {
+            console.log(`⚪ Se han agregado ${appendedImages} imágenes`);
+            console.log(`🟣 Se han cargado ${loadedImages} imágenes`);
+            console.log("---------------------------------------");
+        }
+      </script>
     <!-- Add more scripts here -->
     <script type="module" src="/_dist_/index.js"></script>
   </body>
