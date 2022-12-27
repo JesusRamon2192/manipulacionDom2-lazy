@@ -1,4 +1,5 @@
 
+
 const isIntersecting = (entry) => {
     return entry.isIntersecting; // true dentro de la pantalla
 }
@@ -9,6 +10,10 @@ const loadImage = (entry) => {
     const url = imagen.dataset.src;
     //Cargue imagen
     imagen.src = url;
+
+    loadedImages++; 
+    printLog();
+    
     //console.log("holis");
     //console.log(container.nodeName);
     //desregistra la imagen (unlisten)
